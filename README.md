@@ -1,17 +1,25 @@
-# Educational Chatbot
+# Amazon Assistant Chatbot
 
 ## Overview
 
-This Educational Chatbot is an innovative tool designed to simplify information gathering and facilitate learning. By integrating various artificial intelligence capabilities, this project offers a cohesive solution for users aiming to streamline their educational pursuits. The chatbot can handle basic inquiries, summarize YouTube videos, extract information from PDFs, and analyze images. Each feature is accessible through dedicated pages within the application, ensuring a user-friendly experience.
+This project is a Streamlit-based chatbot application designed to assist Amazon customers with inquiries related to product returns, order status and general questions about products or services. The chatbot ensures that conversations remain respectful and free from harmful language by detecting and cleaning bad or toxic comments.
 
-### Features
+## Features
+• Real-time detection and cleaning of bad/toxic comments
 
-Chatbot - For basic inquiries and answers fundamental questions.
+• Maintains the overall context of the original messages
 
-YouTube Video Summarizer - Condenses lengthy video content into concise insights and helps users quickly grasp essential information.
+• User-friendly interface built with Streamlit
 
-PDF Q/A - Extracts essential information from PDF documents and simplifies the process of navigating through large amounts of text.
+• Pre-defined conversation flow for initial interaction
 
-Image Analyzer - Provides insightful interpretations of visual content and enhances learning by explaining images and visual data.
+• SQL query generation and natural language response based on database schema
 
-Tools Used - Streamlit, Langchain, Gemini, Groq - Mixtral, SQLite3, Chroma DB, Whisper.
+## How It Works
+Start of the app: The app starts with a welcome message from Velraj, the Amazon agent. Users connect to a SQL database using credentials provided in the sidebar.
+
+Detoxification: When a user inputs a message, the text is processed to remove any offensive or inappropriate content.
+
+Response Generation: The chatbot generates SQL queries based on user questions and the database schema. Responses are crafted based on SQL query results and provided in natural language.
+
+Conversation History: The app maintains a conversation history to ensure contextually relevant responses.
